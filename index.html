@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alma Quântica — Consciência · Vibração · Manifestação</title>
+<meta name="tiktok-developers-site-verification" content="zyyfMqeVKxFwJ9G"/>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300&family=Rajdhani:wght@300;400;500;600&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cyan: #00E5FF;
+    --purple: #A855F7;
+    --gold: #FFD700;
+    --bg: #000008;
+  }
+
+  body {
+    background: var(--bg);
+    color: #fff;
+    font-family: 'Rajdhani', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── Stars ── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background-image:
+      radial-gradient(1px 1px at 8%  12%, rgba(255,255,255,.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 22% 38%, rgba(255,255,255,.5) 0%, transparent 100%),
+      radial-gradient(2px 2px at 38%  6%, rgba(255,255,255,.8) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 18%, rgba(255,255,255,.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 72% 52%, rgba(255,255,255,.4) 0%, transparent 100%),
+      radial-gradient(2px 2px at 87% 10%, rgba(255,255,255,.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 14% 68%, rgba(255,255,255,.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 48% 82%, rgba(255,255,255,.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 91% 73%, rgba(255,255,255,.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 30% 91%, rgba(255,255,255,.5) 0%, transparent 100%),
+      radial-gradient(2px 2px at 68% 88%, rgba(255,255,255,.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at  4% 48%, rgba(255,255,255,.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 60% 60%, rgba(255,255,255,.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 30%, rgba(255,255,255,.5) 0%, transparent 100%);
+  }
+
+  /* ── Glows ── */
+  body::after {
+    content: '';
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(600px 400px at 20% 20%, rgba(0,229,255,.05) 0%, transparent 70%),
+      radial-gradient(500px 500px at 80% 80%, rgba(168,85,247,.06) 0%, transparent 70%),
+      radial-gradient(400px 300px at 50% 50%, rgba(255,215,0,.03) 0%, transparent 70%);
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 48px;
+    background: rgba(0,0,8,.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0,229,255,.1);
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; font-weight: 700; letter-spacing: 2px;
+    color: #fff; text-decoration: none;
+  }
+  .nav-logo span { color: var(--cyan); }
+
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a {
+    font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
+    color: rgba(255,255,255,.5); text-decoration: none;
+    transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--cyan); }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative; z-index: 1;
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+    padding: 120px 24px 80px;
+  }
+
+  .hero-atom {
+    width: 120px; height: 120px; margin-bottom: 40px;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,100% { transform: translateY(0); }
+    50%      { transform: translateY(-12px); }
+  }
+
+  .hero-eyebrow {
+    font-size: 11px; letter-spacing: 5px; text-transform: uppercase;
+    color: var(--cyan); margin-bottom: 20px; opacity: .8;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 8vw, 96px);
+    font-weight: 700; line-height: 1;
+    letter-spacing: 4px; margin-bottom: 8px;
+  }
+  .hero-title span { color: var(--cyan); }
+
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 300; font-style: italic;
+    color: rgba(255,255,255,.5); margin-bottom: 32px;
+    letter-spacing: 2px;
+  }
+
+  .hero-tagline {
+    font-size: 13px; letter-spacing: 4px; text-transform: uppercase;
+    color: var(--purple); margin-bottom: 48px;
+  }
+
+  .hero-cta {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 36px; border-radius: 999px;
+    background: linear-gradient(135deg, rgba(0,229,255,.15), rgba(168,85,247,.15));
+    border: 1px solid rgba(0,229,255,.3);
+    color: #fff; font-size: 14px; letter-spacing: 2px;
+    text-decoration: none; text-transform: uppercase;
+    transition: all .3s;
+  }
+  .hero-cta:hover {
+    background: linear-gradient(135deg, rgba(0,229,255,.25), rgba(168,85,247,.25));
+    border-color: var(--cyan);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0,229,255,.15);
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    position: relative; z-index: 1;
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px; padding: 0 48px; margin: 0 auto 64px;
+    max-width: 800px;
+  }
+  .sdl { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(0,229,255,.3)); }
+  .sdr { flex: 1; height: 1px; background: linear-gradient(90deg, rgba(0,229,255,.3), transparent); }
+  .sdd { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 10px var(--gold); }
+
+  /* ── SECTION ── */
+  section {
+    position: relative; z-index: 1;
+    max-width: 1100px; margin: 0 auto;
+    padding: 80px 24px;
+  }
+
+  .section-label {
+    font-size: 11px; letter-spacing: 5px; text-transform: uppercase;
+    color: var(--cyan); text-align: center; margin-bottom: 16px; opacity: .7;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 5vw, 52px); font-weight: 600;
+    text-align: center; margin-bottom: 48px; letter-spacing: 2px;
+  }
+
+  /* ── CONTENT GRID ── */
+  .content-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .content-card {
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 20px; padding: 32px 28px;
+    transition: all .3s;
+  }
+  .content-card:hover {
+    border-color: rgba(0,229,255,.2);
+    background: rgba(0,229,255,.04);
+    transform: translateY(-4px);
+  }
+
+  .card-icon { font-size: 36px; margin-bottom: 16px; }
+  .card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; font-weight: 600; margin-bottom: 10px;
+  }
+  .card-text { font-size: 15px; color: rgba(255,255,255,.5); line-height: 1.7; }
+
+  /* ── TIKTOK CTA ── */
+  .tiktok-section {
+    background: linear-gradient(135deg, rgba(0,229,255,.05), rgba(168,85,247,.05));
+    border: 1px solid rgba(0,229,255,.15);
+    border-radius: 28px; padding: 64px 40px;
+    text-align: center; margin: 0 24px;
+  }
+
+  .tiktok-btn {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 16px 40px; border-radius: 999px;
+    background: var(--cyan); color: #000;
+    font-size: 16px; font-weight: 600; letter-spacing: 1px;
+    text-decoration: none; margin-top: 32px;
+    transition: all .3s;
+  }
+  .tiktok-btn:hover { transform: scale(1.04); box-shadow: 0 0 40px rgba(0,229,255,.4); }
+
+  /* ── FOOTER ── */
+  footer {
+    position: relative; z-index: 1;
+    text-align: center; padding: 48px 24px;
+    border-top: 1px solid rgba(255,255,255,.06);
+    margin-top: 80px;
+  }
+
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px; font-weight: 700; letter-spacing: 3px;
+    margin-bottom: 16px;
+  }
+  .footer-logo span { color: var(--cyan); }
+
+  .footer-links { display: flex; justify-content: center; gap: 32px; margin-bottom: 24px; flex-wrap: wrap; }
+  .footer-links a {
+    font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+    color: rgba(255,255,255,.35); text-decoration: none; transition: color .2s;
+  }
+  .footer-links a:hover { color: var(--cyan); }
+
+  .footer-copy { font-size: 12px; color: rgba(255,255,255,.2); letter-spacing: 1px; }
+
+  /* ── POLICY PAGES ── */
+  .policy-page { display: none; }
+  .policy-page.active {
+    display: block;
+    position: relative; z-index: 1;
+    max-width: 800px; margin: 0 auto;
+    padding: 120px 24px 80px;
+  }
+
+  .policy-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px; font-weight: 700; margin-bottom: 8px;
+  }
+
+  .policy-date { font-size: 13px; color: rgba(255,255,255,.3); letter-spacing: 2px; margin-bottom: 48px; }
+
+  .policy-section { margin-bottom: 36px; }
+  .policy-section h2 {
+    font-size: 18px; font-weight: 600; letter-spacing: 1px;
+    color: var(--cyan); margin-bottom: 12px;
+    padding-bottom: 8px; border-bottom: 1px solid rgba(0,229,255,.15);
+  }
+  .policy-section p, .policy-section li {
+    font-size: 15px; line-height: 1.8; color: rgba(255,255,255,.6);
+    margin-bottom: 8px;
+  }
+  .policy-section ul { padding-left: 20px; }
+  .policy-section li { list-style: disc; }
+
+  .back-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 24px; border-radius: 999px;
+    border: 1px solid rgba(0,229,255,.3);
+    color: var(--cyan); font-size: 13px; letter-spacing: 1px;
+    cursor: pointer; background: transparent; margin-bottom: 40px;
+    transition: all .2s;
+  }
+  .back-btn:hover { background: rgba(0,229,255,.08); }
+
+  /* ── Responsive ── */
+  @media (max-width: 600px) {
+    nav { padding: 16px 20px; }
+    .nav-links { display: none; }
+    .tiktok-section { padding: 40px 20px; margin: 0 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#" onclick="showPage('home')">ALMA <span>QUÂNTICA</span></a>
+  <ul class="nav-links">
+    <li><a href="#sobre" onclick="showPage('home')">Sobre</a></li>
+    <li><a href="#conteudo" onclick="showPage('home')">Conteúdo</a></li>
+    <li><a href="#" onclick="showPage('termos')">Termos</a></li>
+    <li><a href="#" onclick="showPage('privacidade')">Privacidade</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════ HOME ══════════ -->
+<div id="page-home">
+
+  <div class="hero">
+    <!-- Atom SVG -->
+    <svg class="hero-atom" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="hng" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#fff"/>
+          <stop offset="40%" stop-color="#FFE066"/>
+          <stop offset="100%" stop-color="#FFD700"/>
+        </radialGradient>
+        <filter id="hg"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        <filter id="he"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+      <ellipse cx="60" cy="50" rx="52" ry="19" fill="none" stroke="#00E5FF" stroke-width="1.8" opacity=".9" filter="url(#he)"/>
+      <ellipse cx="60" cy="50" rx="52" ry="19" fill="none" stroke="#A855F7" stroke-width="1.8" opacity=".9" transform="rotate(60 60 50)" filter="url(#he)"/>
+      <ellipse cx="60" cy="50" rx="52" ry="19" fill="none" stroke="#00E5FF" stroke-width="1.8" opacity=".9" transform="rotate(120 60 50)" filter="url(#he)"/>
+      <circle cx="112" cy="50" r="5" fill="#00E5FF" filter="url(#he)"/>
+      <circle cx="34"  cy="90" r="5" fill="#A855F7" filter="url(#he)"/>
+      <circle cx="34"  cy="10" r="5" fill="#00E5FF" filter="url(#he)"/>
+      <circle cx="60" cy="50" r="16" fill="url(#hng)" filter="url(#hg)"/>
+      <circle cx="60" cy="50" r="7"  fill="#fff"      filter="url(#hg)"/>
+    </svg>
+
+    <p class="hero-eyebrow">Bem-vindo ao portal</p>
+    <h1 class="hero-title">ALMA <span>QUÂNTICA</span></h1>
+    <p class="hero-subtitle">onde a ciência encontra o espírito</p>
+    <p class="hero-tagline">Consciência · Vibração · Manifestação</p>
+    <a class="hero-cta" href="https://tiktok.com/@alma.quantica" target="_blank">
+      ⚛️ Siga no TikTok
+    </a>
+  </div>
+
+  <!-- Sobre -->
+  <section id="sobre">
+    <p class="section-label">Quem somos</p>
+    <h2 class="section-title">Desperte o seu potencial quântico</h2>
+    <div class="section-divider"><div class="sdl"></div><div class="sdd"></div><div class="sdr"></div></div>
+
+    <div class="content-grid">
+      <div class="content-card">
+        <div class="card-icon">🌌</div>
+        <h3 class="card-title">Lei da Atração</h3>
+        <p class="card-text">Aprenda os princípios universais que regem a manifestação e como aplicá-los na sua vida de forma prática e consistente.</p>
+      </div>
+      <div class="content-card">
+        <div class="card-icon">⚛️</div>
+        <h3 class="card-title">Consciência Quântica</h3>
+        <p class="card-text">A ciência quântica comprova o que a espiritualidade sempre soube: sua consciência molda a realidade ao seu redor.</p>
+      </div>
+      <div class="content-card">
+        <div class="card-icon">✨</div>
+        <h3 class="card-title">Manifestação Real</h3>
+        <p class="card-text">Técnicas comprovadas como scripting, método 369, visualização criativa e reprogramação do subconsciente.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conteúdo -->
+  <section id="conteudo">
+    <p class="section-label">Nosso conteúdo</p>
+    <h2 class="section-title">Transformação diária</h2>
+    <div class="section-divider"><div class="sdl"></div><div class="sdd"></div><div class="sdr"></div></div>
+
+    <div class="content-grid">
+      <div class="content-card">
+        <div class="card-icon">🎬</div>
+        <h3 class="card-title">Vídeos Diários</h3>
+        <p class="card-text">Conteúdo poderoso todos os dias sobre manifestação, sinais do universo, técnicas quânticas e despertar espiritual.</p>
+      </div>
+      <div class="content-card">
+        <div class="card-icon">🧲</div>
+        <h3 class="card-title">Técnicas Práticas</h3>
+        <p class="card-text">Do scripting ao método 369 — ensinamos como manifestar abundância, amor, saúde e propósito de forma consistente.</p>
+      </div>
+      <div class="content-card">
+        <div class="card-icon">🔮</div>
+        <h3 class="card-title">Comunidade Viva</h3>
+        <p class="card-text">Junte-se a milhares de pessoas em processo de despertar. Compartilhe manifestações, aprenda e evolua junto.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TikTok CTA -->
+  <section style="padding: 40px 24px 80px;">
+    <div class="tiktok-section">
+      <p class="section-label">Nos encontre</p>
+      <h2 class="section-title" style="margin-bottom: 16px;">Siga a jornada no TikTok</h2>
+      <p style="color: rgba(255,255,255,.5); font-size: 16px; max-width: 500px; margin: 0 auto;">
+        Conteúdo novo todos os dias. Sua transformação começa com um follow.
+      </p>
+      <a class="tiktok-btn" href="https://tiktok.com/@alma.quantica" target="_blank">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
+        @alma.quantica
+      </a>
+      <br><br>
+      <p style="color: rgba(255,255,255,.3); font-size: 13px; letter-spacing: 1px;">
+        📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8cede0e1edfdf9ede2f8e5efede3eae5efe5ede0ccebe1ede5e0a2efe3e1">[email&#160;protected]</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">ALMA <span>QUÂNTICA</span></div>
+    <div class="footer-links">
+      <a href="#sobre" onclick="showPage('home')">Sobre</a>
+      <a href="#conteudo" onclick="showPage('home')">Conteúdo</a>
+      <a href="#" onclick="showPage('termos')">Termos de Serviço</a>
+      <a href="#" onclick="showPage('privacidade')">Política de Privacidade</a>
+      <a href="/cdn-cgi/l/email-protection#bfded3d2dececaded1cbd6dcded0d9d6dcd6ded3ffd8d2ded6d391dcd0d2">Contato</a>
+    </div>
+    <p class="footer-copy">© 2025 Alma Quântica · Todos os direitos reservados</p>
+  </footer>
+
+</div><!-- end home -->
+
+
+<!-- ══════════ TERMOS DE SERVIÇO ══════════ -->
+<div id="page-termos" class="policy-page">
+  <button class="back-btn" onclick="showPage('home')">← Voltar</button>
+  <h1 class="policy-title">Termos de Serviço</h1>
+  <p class="policy-date">Última atualização: 08 de março de 2025</p>
+
+  <div class="policy-section">
+    <h2>1. Aceitação dos Termos</h2>
+    <p>Ao acessar ou utilizar o conteúdo disponibilizado pelo Alma Quântica nas redes sociais, incluindo o TikTok, você concorda com estes Termos de Serviço. Caso não concorde com qualquer parte destes termos, recomendamos que não utilize nossos conteúdos.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>2. Descrição do Serviço</h2>
+    <p>O Alma Quântica é um canal de conteúdo digital voltado à educação e entretenimento nas áreas de Lei da Atração, manifestação, consciência quântica e desenvolvimento pessoal. Todo o conteúdo publicado tem fins exclusivamente informativos e educacionais.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>3. Uso do Conteúdo</h2>
+    <p>Todo o conteúdo publicado é de propriedade do Alma Quântica e protegido por direitos autorais. É expressamente proibido:</p>
+    <ul>
+      <li>Reproduzir ou redistribuir qualquer conteúdo sem autorização prévia por escrito.</li>
+      <li>Utilizar o conteúdo para fins comerciais sem permissão.</li>
+      <li>Modificar, adaptar ou criar obras derivadas sem consentimento.</li>
+      <li>Remover ou alterar avisos de direitos autorais ou marcas do conteúdo.</li>
+    </ul>
+  </div>
+
+  <div class="policy-section">
+    <h2>4. Isenção de Responsabilidade</h2>
+    <p>O conteúdo publicado é de natureza informativa e educacional. Não nos responsabilizamos por decisões tomadas com base em nossos conteúdos. Os resultados de práticas como manifestação e Lei da Atração variam de pessoa para pessoa e não são garantidos.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>5. Links de Terceiros</h2>
+    <p>Nosso conteúdo pode conter links de afiliados ou referências a produtos e serviços de terceiros. Não nos responsabilizamos pelo conteúdo ou práticas de terceiros.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>6. Conduta do Usuário</h2>
+    <p>Ao interagir com nosso conteúdo, o usuário compromete-se a manter linguagem respeitosa, não disseminar spam ou conteúdo ofensivo, e não realizar qualquer forma de assédio.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>7. Modificações dos Termos</h2>
+    <p>Reservamo-nos o direito de modificar estes Termos a qualquer momento. As alterações entrarão em vigor imediatamente após a publicação.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>8. Lei Aplicável</h2>
+    <p>Estes Termos são regidos pelas leis da República Federativa do Brasil. Foro da comarca de Brasília, Distrito Federal.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>9. Contato</h2>
+    <p>Para dúvidas: <a href="/cdn-cgi/l/email-protection#4b2a27262a3a3e2a253f22282a242d2228222a270b2c262a222765282426" style="color: #00E5FF;"><span class="__cf_email__" data-cfemail="76171a1b1707031718021f151719101f151f171a36111b171f1a5815191b">[email&#160;protected]</span></a> ou @alma.quantica no TikTok.</p>
+  </div>
+
+  <footer style="margin-top: 60px;">
+    <div class="footer-links">
+      <a href="#" onclick="showPage('home')">Home</a>
+      <a href="#" onclick="showPage('privacidade')">Política de Privacidade</a>
+    </div>
+    <p class="footer-copy">© 2025 Alma Quântica · Todos os direitos reservados</p>
+  </footer>
+</div>
+
+
+<!-- ══════════ POLÍTICA DE PRIVACIDADE ══════════ -->
+<div id="page-privacidade" class="policy-page">
+  <button class="back-btn" onclick="showPage('home')">← Voltar</button>
+  <h1 class="policy-title">Política de Privacidade</h1>
+  <p class="policy-date">Última atualização: 08 de março de 2025</p>
+
+  <div class="policy-section">
+    <h2>1. Informações que Coletamos</h2>
+    <p>O Alma Quântica pode coletar as seguintes informações:</p>
+    <ul>
+      <li>Dados fornecidos voluntariamente (mensagens, comentários, e-mail de contato).</li>
+      <li>Dados de navegação coletados automaticamente pelas plataformas de redes sociais.</li>
+      <li>Dados de analytics de acesso a links e páginas vinculadas ao canal.</li>
+    </ul>
+  </div>
+
+  <div class="policy-section">
+    <h2>2. Como Usamos as Informações</h2>
+    <ul>
+      <li>Melhorar a qualidade e relevância do conteúdo publicado.</li>
+      <li>Responder a interações e solicitações dos seguidores.</li>
+      <li>Analisar o desempenho do conteúdo para aprimorar a experiência do usuário.</li>
+    </ul>
+  </div>
+
+  <div class="policy-section">
+    <h2>3. Compartilhamento de Dados</h2>
+    <p>Não vendemos, alugamos ou compartilhamos seus dados pessoais com terceiros, exceto quando exigido por lei ou com plataformas parceiras que operam sob suas próprias políticas de privacidade.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>4. Cookies e Tecnologias de Rastreamento</h2>
+    <p>As plataformas de terceiros que utilizamos (TikTok, Beacons, etc.) podem usar cookies. Recomendamos consultar as políticas de privacidade dessas plataformas.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>5. Links de Afiliados</h2>
+    <p>Nosso conteúdo pode incluir links de programas de afiliados. Ao clicar nesses links, você poderá ser rastreado pelas respectivas plataformas de acordo com suas próprias políticas de privacidade.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>6. Segurança dos Dados</h2>
+    <p>Adotamos medidas técnicas e organizacionais adequadas para proteger as informações coletadas contra acesso não autorizado.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>7. Seus Direitos (LGPD)</h2>
+    <p>Nos termos da Lei Geral de Proteção de Dados (Lei n.º 13.709/2018), você tem direito a:</p>
+    <ul>
+      <li>Confirmar a existência de tratamento de seus dados.</li>
+      <li>Acessar, corrigir ou solicitar a exclusão de seus dados pessoais.</li>
+      <li>Revogar o consentimento para uso de seus dados a qualquer momento.</li>
+      <li>Solicitar a portabilidade dos seus dados, quando aplicável.</li>
+    </ul>
+  </div>
+
+  <div class="policy-section">
+    <h2>8. Alterações desta Política</h2>
+    <p>Esta Política pode ser atualizada periodicamente. A data da última atualização estará sempre indicada no topo deste documento.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>9. Contato</h2>
+    <p>Para exercer seus direitos ou tirar dúvidas: <a href="/cdn-cgi/l/email-protection#71101d1c100004101f051812101e17181218101d31161c10181d5f121e1c" style="color: #00E5FF;"><span class="__cf_email__" data-cfemail="85e4e9e8e4f4f0e4ebf1ece6e4eae3ece6ece4e9c5e2e8e4ece9abe6eae8">[email&#160;protected]</span></a></p>
+  </div>
+
+  <footer style="margin-top: 60px;">
+    <div class="footer-links">
+      <a href="#" onclick="showPage('home')">Home</a>
+      <a href="#" onclick="showPage('termos')">Termos de Serviço</a>
+    </div>
+    <p class="footer-copy">© 2025 Alma Quântica · Todos os direitos reservados</p>
+  </footer>
+</div>
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Simple SPA routing
+  function showPage(page) {
+    document.getElementById('page-home').style.display     = page === 
